@@ -1,24 +1,31 @@
-# Project: Machine Learning Evaluation Metrics
+# Projeto de Avaliação de Métricas de Classificação (MNIST CNN)
 
-This project demonstrates how to calculate and visualize key evaluation metrics for machine learning classification models. It uses a simple Convolutional Neural Network (CNN) trained on the famous MNIST dataset of handwritten digits.
+## Objetivo
 
-## Description
+O principal objetivo deste projeto é ir além da métrica de acurácia, realizando uma **avaliação detalhada e robusta** de um modelo de classificação. O foco é implementar o cálculo das principais métricas derivadas da matriz de confusão para diagnosticar precisamente o desempenho do modelo em cada classe.
 
-The goal of this project is to go beyond simple accuracy and provide a detailed analysis of a model's performance. The code calculates and displays metrics such as:
+As métricas calculadas e analisadas são:
+* **Precisão (Precision)**
+* **Sensibilidade (Recall)**
+* **Especificidade (Specificity)**
+* **F1-score**
 
-  * **Precision**
-  * **Recall (Sensitivity)**
-  * **F1-score**
-  * **Specificity**
+## Metodologia
 
-It also generates a visual **confusion matrix**, which serves as the foundation for all calculations. The metrics are calculated for each of the 10 classes in the dataset, offering a granular view of how the model performs on each digit.
+O projeto segue um pipeline de Machine Learning padrão, com uma etapa de avaliação aprofundada:
 
-## Technologies and Libraries
+1.  **Preparação dos Dados:** O dataset **MNIST** (dígitos escritos à mão) é carregado e normalizado.
+2.  **Modelagem:** Uma **Rede Neural Convolucional (CNN)** é construída e treinada para a tarefa de classificação de 10 classes (dígitos de 0 a 9).
+3.  **Geração da Matriz de Confusão:** O modelo faz previsões no conjunto de teste, e a matriz de confusão 10x10 é gerada, comparando os rótulos verdadeiros com as previsões.
+4.  **Cálculo das Métricas:** Para cada uma das 10 classes, o problema multiclasse é transformado em uma visão **"Uma Classe vs. Todas as Outras"** para a extração dos valores de VP, VN, FP e FN.
+5.  **Análise e Visualização:** As métricas são calculadas e impressas por classe, e um **heatmap** visual da matriz de confusão normalizada é exibido.
 
-The following libraries and technologies were used in this project's development:
+## Tecnologias Usadas
 
-  * **Python 3.x**
-  * **TensorFlow / Keras**: For building and training the neural network model.
-  * **NumPy**: For data manipulation and mathematical operations.
-  * **Pandas**: For formatting the confusion matrix data.
-  * **Matplotlib / Seaborn**: For visualizing the confusion matrix as a heatmap.
+| Tecnologia | Finalidade Principal |
+| :--- | :--- |
+| **Python 3.x** | Linguagem de programação central. |
+| **TensorFlow/Keras** | Desenvolvimento e treinamento da Rede Neural Convolucional (CNN). |
+| **NumPy** | Operações matemáticas de alto desempenho e manipulação da matriz de confusão. |
+| **Pandas** | Estruturação dos dados para visualização da matriz de confusão. |
+| **Matplotlib/Seaborn** | Geração do mapa de calor (heatmap) para a matriz de confusão. |
