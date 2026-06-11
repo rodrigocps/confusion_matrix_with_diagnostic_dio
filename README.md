@@ -29,3 +29,6 @@ O projeto segue um pipeline de Machine Learning padrão, com uma etapa de avalia
 | **NumPy** | Operações matemáticas de alto desempenho e manipulação da matriz de confusão. |
 | **Pandas** | Estruturação dos dados para visualização da matriz de confusão. |
 | **Matplotlib/Seaborn** | Geração do mapa de calor (heatmap) para a matriz de confusão. |
+
+## Uso de IA
+Este projeto contou com auxílio de ferramentas de Inteligência Artificial para geração de trechos de código e ideias de implementação. Todo o material foi revisado, adaptado e testado manualmente antes da publicação.
